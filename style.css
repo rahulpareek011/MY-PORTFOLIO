@@ -1,0 +1,438 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url('./assets/gotham/Gotham Fonts Family/GOTHAM-BOLD.TTF') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Regular';
+  src: url('./assets/gotham/Gotham Fonts Family/Gotham-Medium.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bele';
+  src: url('assets/Belleza-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Glacial indifference';
+  src: url('assets/GlacialIndifference-Regular.otf') format('truetype');
+  font-style: normal;
+}
+
+
+.navigation {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px 0px 40px;
+  font-family: 'Bele', sans-serif;
+  background: linear-gradient(90deg, #000000, #c89116);
+  z-index: 100;
+}
+
+.brand {
+  font-family: 'Gotham Bold', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #e1d7d9;
+  margin-left: 28px;
+  padding: 10px;
+}
+.sigma {
+  display: block;
+  margin: 0;
+  width: max-content;
+  font-size: 28px;
+  transform: translateX(10px);
+}
+
+.coders {
+  font-size: 30.4924px;
+  margin: 0;
+  width: max-content;
+}
+
+.info{
+  display: flex;
+  font-family: Bele;
+  text-decoration: none;
+  justify-content: space-around;
+  padding: 20px 120px;
+}
+
+.info a {
+  position: relative;
+  margin-left: 35px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: rgba(225, 215, 217, 0.773);
+  transition: .3s;
+}
+
+.info a:hover,
+.info a.active{
+  color: rgb(225, 215, 217);
+  text-shadow: 0 0 8px black;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+
+
+.mid{
+  padding: 0px 60px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust as needed */
+  color: #e1d7d9;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;  text-align: center;
+  line-height: 45px;
+}
+
+.profession {
+  transform: translateX(-270px);
+  margin-top: 40px;
+}
+
+.prof1, .prof2 {
+  margin: 0;
+  line-height: 85px;
+  font-size: 5rem;
+  letter-spacing: 4px;        /* Letter spacing */
+}
+
+.prof2{
+  transform: translateX(-102px);
+  margin: 0;
+}
+
+.portfolio-title p {
+  font-size: 1rem;
+  margin: 0;
+  position: relative;
+  font-weight: 400;
+  transform: translateX(-460px);
+  font-family: Arimo;
+}
+
+.portfolio-title{
+    transform: translateX(-44px);
+}
+
+.name p {
+  font-size: 3rem;
+  margin-top: 1.5rem;
+  letter-spacing: 1px;
+  transform: translateY(70px);
+  position: absolute;
+  margin-left: 220px;
+  font-family: 'Gotham Bold', sans-serif;
+}
+
+.logo{
+  height: 391.7px;
+  width: 391.7px;
+  background-size:cover;
+  border-radius: 50%;
+  background-image: url(assets/logo/logo.png);
+  display: inline;
+  align-items: center;
+  position: absolute;
+  transform: translateX(380px);
+}
+
+section{
+  background: linear-gradient(90deg, #000000, #c89116);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1{
+  height: 100vh;
+  width: 49.9%;
+  margin-right: 8px;
+  background-color: #161616;
+}
+
+.box2{
+  height: 100vh;
+  width: 49.9%;
+  margin-left: 8px;
+  background-color: #161616;
+}
+
+@font-face {
+  font-family: 'Norwester';
+  src: url('assets/norwester.otf') format('opentype');
+}
+
+.section-number {
+  font-size: 67.5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-content{
+  margin-top: 110px;
+}
+
+.number{
+    font-family: 'Norwester', sans-serif;
+    -webkit-text-stroke: 2px #e1d7d9; /* Hollow effect */
+    color: transparent;
+
+}
+
+.sectiontext{
+  font-size: 83.8px;
+  color: #e1d7d9;
+  font-family: 'Norwester', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-10px);
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;   /* puts 02 and ABOUT on different lines */
+  align-items: flex-start;    /* aligns to the right inside the box */
+}
+
+.about-text {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.about-text p {
+  color: #e1d7d9;
+  padding: 3rem;
+  line-height: 2.5;             /* Line spacing */
+  letter-spacing: 4px;        /* Letter spacing */
+  text-align: right;
+  margin-top: 110px;
+}
+
+.skills-box1{
+  margin-top: 4px;
+  height: 100vh;
+  width: 49.9%;
+  margin-right: 8px;
+  background-color: #161616;
+}
+
+.skills-text {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  line-height: 4;             /* Line spacing */
+}
+
+.skills-text p {
+  color: #e1d7d9;
+}
+
+.skill1{
+  margin-top: 80px;
+  margin-bottom: 15px;
+}
+.skill2{
+  /* margin-top: 15px; */
+  margin-bottom: 15px;
+}
+.skill3{
+  /* margin-top: 15px; */
+  margin-bottom: 15px;
+}
+.skill4{
+  /* margin-top: 15px; */
+  margin-bottom: 15px;
+}
+
+.line{
+  margin-top: 15px;
+  display: flex;
+  height: 2px;
+  width: 70vh;
+  background: linear-gradient(90deg, #585445, #c89116);
+  justify-content: center;
+  align-items: center;
+}
+
+.defined-skills{
+  font-family: 'Gotham Regular', sans-serif;
+}
+
+.Main-skill{
+  font-size: 20.4px;
+  line-height: 10px;
+  margin: 13px;
+}
+
+.skills-box2{
+  margin-top: 4px;
+  height: 100vh;
+  width: 49.9%;
+  margin-left: 8px;
+  background-color: #161616;
+}
+
+
+.contact-box1{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 4px;
+  height: 100vh;
+  width: 49.9%;
+  margin-right: 8px;
+  background-color: #161616;
+}
+
+.section-content {
+  margin-bottom: 50px;
+}
+
+.contact-box2{
+  margin-top: 4px;
+  height: 100vh;
+  width: 49.9%;
+  margin-left: 8px;
+  background-color: #161616;
+}
+
+form{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+form h3{
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+form input, form textarea{
+  font-family: 'Glacial indifference','sans-serif';
+  height: 18px;
+  width: 462px;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: transparent;
+  border: 2px solid white;
+  outline: none;
+  font-size: 16px;
+}
+
+form textarea{
+  height: 85.1px;
+}
+
+form button{
+  height: 48.3px;
+  width: 485px;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Gotham Bold', sans-serif;
+}
+
+form button:hover{
+  background-color: #545454;
+  color: white;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  color: white; /* sets the typing text color */
+}
+
+.sociallinks{
+  position: absolute;
+  left: 0px; /* distance from the left edge */
+  bottom: 20px; /* adjust based on your design */
+  text-align: left;  
+  margin-left: 15px;
+}
+
+.sociallinks a{
+  color: rgb(147, 147, 147);
+  font-size: 27.8px;
+  margin-right: 16px;
+}
+
+.sociallinks a:hover {
+  color: white;
+}
+
+.social-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.sociallinks h6{
+  font-family: 'Glacial indifference','sans-serif';
+  margin-bottom: -20px;
+  font-size: 21.6px;
+  color: white;
+  letter-spacing: 6px;
+}
+
+.links{
+    display: flex;
+    margin-left: 100px;
+    transform: translateY(-10px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
