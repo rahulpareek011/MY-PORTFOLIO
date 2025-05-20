@@ -1041,14 +1041,9 @@ html {
   }
 
   .contact-box1{
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     margin-top: 0;
-    width: 168px;
-    height: 400px;
-  }
-
-  .section-content{
-    margin-left: 60;
+    width: 100%;
   }
 
   .container {
