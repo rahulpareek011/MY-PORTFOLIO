@@ -91,6 +91,43 @@ body {
 }
 
 
+/* Default hidden menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.mobile-menu a {
+    color: white;
+    font-size: 2rem;
+    margin: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.4s ease;
+}
+
+.mobile-menu.show {
+    left: 0;
+    opacity: 1;
+}
+
+.mobile-menu.show a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 
 .mid {
   padding: 0px 60px 0px 40px;
@@ -197,10 +234,6 @@ section {
   align-items: center;
 }
 
-.section-content {
-  margin-top: 110px;
-}
-
 .number {
   font-family: 'Norwester', sans-serif;
   -webkit-text-stroke: 2px #e1d7d9;
@@ -228,6 +261,7 @@ section {
   /* puts 02 and ABOUT on different lines */
   align-items: flex-start;
   /* aligns to the right inside the box */
+  margin: 0;
 }
 
 .about-text {
@@ -244,13 +278,13 @@ section {
 
 .about-text p {
   color: #e1d7d9;
-  padding: 3rem;
-  line-height: 2.5;
+  padding: 2rem;
+  line-height: 2;
   /* Line spacing */
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   /* Letter spacing */
   text-align: right;
-  margin-top: 110px;
+  margin: 0;
 }
 
 .skills-box1 {
@@ -296,14 +330,14 @@ section {
 
 .skill4 {
   /* margin-top: 15px; */
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .line {
   margin-top: 15px;
   display: flex;
   height: 2px;
-  width: 70vh;
+  width: 70%;
   background: linear-gradient(90deg, #585445, #c89116);
   justify-content: center;
   align-items: center;
@@ -339,10 +373,6 @@ section {
   width: 49.9%;
   margin-right: 8px;
   background-color: #161616;
-}
-
-.section-content {
-  margin-bottom: 50px;
 }
 
 .contact-box2 {
@@ -458,16 +488,36 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Tablet / small desktop */
-@media (max-width: 1024px) {
-
-  .info .nav-o {
+  .nav-o {
     display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
   }
+
+.mobile-menu a{
+  text-decoration: none;
+}
+
+/* Tablet / small desktop */
+@media (max-width: 1124px) {
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-o {
+        display: none;
+    }
 
   .info {
     padding: 0;
-    margin-right: 60px;
+    margin-right: 70px;
+  }
+
+  .info a{
+    font-size: 1.3rem;
   }
 
   .mid {
@@ -485,28 +535,49 @@ html {
   }
 
   .prof2 {
-    transform: translateX(-60px);
+    transform: translateX(-84px);
   }
 
   .portfolio-title,
   .portfolio-title p {
-    transform: translateX(-30px);
+    transform: translateX(-166px);
   }
 
   .name p {
     font-size: 2.5rem;
     margin-left: 150px;
-    transform: translateY(60px);
+    transform: translateY(50px);
   }
 
   .logo {
     width: 320px;
     height: 320px;
-    transform: translateX(300px);
+    transform: translateX(280px);
   }
 
   .line {
     width: 80%;
+  }
+
+  .box2 p{
+    margin:  0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-content{
+    margin: 0;
+  }
+
+  .skills-box1{
+    font-size: 0.8rem;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 8px;
+    margin-top: 4px;
   }
 
 
@@ -551,27 +622,26 @@ html {
 }
 
 /* Tablet portrait / large phones */
-@media (max-width: 770px) {
+@media (max-width: 900px) {
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-o {
+        display: none;
+    }
 
   section {
-    min-height: 100vh;
+    min-height: 25vh;
   }
 
   .navigation {
     padding: 0 20px;
   }
 
-  .info {
-    display: none;
-    /* hide full menu */
-  }
-
-  .nav-o {
-    /* show burger icon */
-    display: inline-block;
-    font-size: 1.8rem;
-    color: rgba(225, 215, 217, 0.8);
-
+  .info a{
+    font-size: 1rem;
   }
 
   .mid {
@@ -611,6 +681,29 @@ html {
     transform: none;
     width: 250px;
     height: 250px;
+  }
+
+  .box2 p{
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .Main-skill{
+    line-height: 1;
+  }
+
+  .skills-box1{
+    font-size: 0.6rem;
+  }
+
+  .skills-box1 .skill1{
+    margin: 0;
+  }
+
+
+  .skill4{
+    margin-bottom: 50px;
   }
 
   .name {
@@ -660,20 +753,20 @@ html {
   }
 
   .container input {
-    width: 270px;
+    width: 250px;
     height: 12px;
     margin-bottom: 22px;
   }
 
   .container textarea {
     height: 24px;
-    width: 270px;
+    width: 250px;
   }
 
   .container button {
     margin-top: 12px;
     height: 12px;
-    width: 290px;
+    width: 270px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -702,14 +795,28 @@ html {
 }
 
 /* Mobile phones */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
   section {
-    min-height: 25vh;
+    min-height: 100vh;
   }
 
-  .navigation {
+
+  .info{
+    padding: 10px;
+    margin-left: -40px;
+  }
+
+.brand{
+  display: none;
+}
+
+  .nav-links{
     display: none;
+  }
+
+  .nav-o{
+    display: inline-block;
   }
 
   .profession {
@@ -753,20 +860,14 @@ html {
     font-size: 3rem;
   }
 
-  .about {
-    height: 430px;
-    width: 500px;
-  }
-
   .sectiontext {
     font-size: 3rem;
   }
 
   .box1 {
-    height: 400px;
     width: 100%;
-    margin-bottom: 10px;
     margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .section-content {
@@ -776,32 +877,40 @@ html {
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-left: 20px;
+  }
+
+  .contact-box1 .section-content{
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 
   .box2 {
-    height: 400px;
     width: 100%;
-    margin-bottom: 10px;
     margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .box2 p {
-    font-size: 10px;
-    letter-spacing: 0;
-    padding: 28px;
+    font-size: 8px;
+    padding: 14px;
+    text-align: start;
   }
 
-  .skills {
-    height: 430px;
-    width: 500px;
+   #skills {
+    height: 100%;
+    width: 100%;
   }
 
   .skills-box1 {
-    height: 400px;
     width: 100%;
     margin-bottom: 10px;
     margin-right: 0;
+    height: 100vh;
+    margin-top: 0;
   }
 
   .skill1 {
@@ -838,28 +947,23 @@ html {
   }
 
   .skills-box2 {
-    height: 400px;
     width: 100%;
+    margin-top: 0;
     margin-bottom: 10px;
-  }
-
-  .contact {
-    height: 430px;
-    width: 500px;
   }
 
   .contact-box1 {
-    height: 400px;
     width: 100%;
+    margin: 0;
     margin-bottom: 10px;
-    margin-right: 0;
   }
 
+
   .contact-box2 {
-    height: 400px;
     width: 100%;
+    margin-left: 10px;
     margin-bottom: 10px;
-    margin-right: 0;
+    margin-top: 0;
   }
 
   .sociallinks h6 {
@@ -872,27 +976,31 @@ html {
   }
 
   .links {
-    margin-left: -40px;
+    position: static;
+    margin-left: 10px;
     transform: translateY(-66px);
   }
 
   .container {
     height: 400px;
-    width: 200px;
+    width: 100%;
   }
 
   .container form {
     margin-top: 70px;
+
   }
 
   .container input {
     width: 120px;
     height: 12px;
+    font-size: 0.6rem;
   }
 
   .container textarea {
     height: 24px;
     width: 120px;
+    font-size: 0.6rem;
   }
 
   .container button {
@@ -901,6 +1009,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.6rem;
   }
 
   form {
@@ -912,12 +1021,21 @@ html {
   }
 }
 
-@media(max-width:360px) {
-  .about-text p {
-    margin-top: 30px;
-    text-align: center;
+@media(max-width: 360px) {
+
+  section {
+    min-height: 100vh;
   }
 
+  .nav-links{
+    display: none;
+  }
+
+  .nav-o{
+    display: inline-block;
+  }
+
+  
   form h3{
     font-size: 0.6rem;
   }

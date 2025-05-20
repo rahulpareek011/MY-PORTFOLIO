@@ -16,3 +16,17 @@ window.onscroll = () => {
         }
     });
 };
+    const navIcon = document.querySelector('.nav-o');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    navIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        mobileMenu.classList.toggle('show');
+    });
+
+
+document.querySelectorAll('.mobile-menu a').forEach(links => {
+        links.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+    });
+});
