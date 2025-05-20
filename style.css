@@ -458,20 +458,14 @@ html {
   scroll-behavior: smooth;
 }
 
-@media(max-width>1024px) {
-  .nav-o {
-    display: none;
-  }
-}
-
 /* Tablet / small desktop */
 @media (max-width: 1024px) {
 
-.nav-o{
-  display: none;
-}
+  .info .nav-o {
+    display: none;
+  }
 
-  .info{
+  .info {
     padding: 0;
     margin-right: 60px;
   }
@@ -511,7 +505,7 @@ html {
     transform: translateX(300px);
   }
 
-  .line{
+  .line {
     width: 80%;
   }
 
@@ -555,8 +549,6 @@ html {
 
 
 }
-
-
 
 /* Tablet portrait / large phones */
 @media (max-width: 770px) {
@@ -920,11 +912,63 @@ html {
   }
 }
 
-
-@media(max-width: 610px) {
-  .box2 p {
-    line-height: 1.7;
-    margin-top: 10px;
+@media(max-width:360px) {
+  .about-text p {
+    margin-top: 30px;
     text-align: center;
+  }
+
+  form h3{
+    font-size: 0.6rem;
+  }
+
+  .contact-box1{
+    margin-bottom: 6px;
+    margin-top: 0;
+    width: 168px;
+    height: 400px;
+  }
+
+  .section-content{
+    margin-left: 60;
+  }
+
+  .container {
+    height: 400px;
+    width: 168px;
+  }
+
+  .container form {
+    margin: 0;
+  }
+
+  .container input {
+    width: 100px;
+    height: 12px;
+    font-size: 0.5rem;
+  }
+
+  .container textarea {
+    height: 24px;
+    width: 100px;
+    font-size: 0.5rem;
+  }
+
+  .container button {
+    height: 12px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5rem;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 168px;
+    height: 400px;
   }
 }
