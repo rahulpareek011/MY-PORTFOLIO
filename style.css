@@ -47,7 +47,7 @@ body {
   font-weight: bold;
   font-style: normal;
   color: #e1d7d9;
-  margin-left: 28px;
+  margin-left: 8px;
   padding: 10px;
 }
 
@@ -55,14 +55,9 @@ body {
   display: block;
   margin: 0;
   width: max-content;
-  font-size: 28px;
+  font-size: 20px;
   transform: translateX(10px);
-}
-
-.coders {
-  font-size: 30.4924px;
-  margin: 0;
-  width: max-content;
+  text-align: justify;
 }
 
 .info {
@@ -70,14 +65,14 @@ body {
   font-family: Bele;
   text-decoration: none;
   justify-content: space-around;
-  padding: 20px 120px;
+  padding: 20px 60px 20px 120px;
 }
 
 .info a {
   position: relative;
   margin-left: 35px;
   text-decoration: none;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 400;
   color: rgba(225, 215, 217, 0.773);
   transition: .3s;
@@ -404,7 +399,6 @@ section {
 }
 
 .line {
-  margin-top: 15px;
   display: flex;
   height: 2px;
   width: 70%;
@@ -816,6 +810,8 @@ p {
     font-size: 0.8rem;
     text-align: center;
     margin-top: 5px;
+    letter-spacing: 4px;
+    line-height: 28px;
   }
 
   .Main-skill{
@@ -1002,6 +998,8 @@ p {
     margin-bottom: 10px;
   }
 
+
+
   .section-content {
     margin: 0;
     font-size: 1rem;
@@ -1030,6 +1028,8 @@ p {
     font-size: 8px;
     padding: 14px;
     text-align: start;
+    letter-spacing: 4px;
+    line-height: 18px;
   }
 
    #skills {
@@ -1263,5 +1263,10 @@ p {
   .fa-instagram{
     transform: translateY(-77px);
     margin-left: 13px;
+  }
+
+  .box2 p{
+    letter-spacing: 4px;
+    line-height: 18px;
   }
 }
